@@ -41,6 +41,7 @@
 
             button:hover {
                 background-color: #ADD8E6;
+
             }
     </style>
 </head>
@@ -50,26 +51,28 @@
     <p><span id="name">Максим</span></p>
     <p><span id="surname">Елсуков</span></p>
 
+    <h2><button onclick="window.location.href = 'baza.html';">Визитка моего пёсика</button></h2>
+
 
     <script>
         function changeSurname() {
             var newSurname = document.getElementById("newSurname").value;
             document.getElementById("surname").innerText = newSurname;
         }
-  function changeName() {
+        function changeName() {
             var newSurname = document.getElementById("newName").value;
             document.getElementById("name").innerText = newSurname;
         }
 
         function changeBackgroundColor() {
-            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
             document.body.style.backgroundColor = randomColor;
         }
     </script>
 </body>
 <body>
     <h1>Работа</h1>
-    <h2><button onclick="window.location.href = 'baza.html';">Визитка моего пёсика</button></h2>
+
     <h2><button onclick="window.location.href = 'LR3_1.html';">Перейти на индивидуалку №1</button></h2>
     <h2><button onclick="window.location.href = 'LR3_2.html';">Перейти на индивидуалку №2</button></h2>
     <h2><button onclick="window.location.href = 'LR3_3.html';">Перейти на индивидуалку №3</button></h2>
