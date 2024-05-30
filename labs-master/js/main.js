@@ -10,7 +10,7 @@
 			mathematic = confirm("Знаете древнерусский?");
 			asu = confirm("Шутите ли вы про негров?");
 			cutting = confirm("Вы учитесь?");
-			programming = confirm("Вы коммуникабельны");
+			programming = confirm("Вы коммуникабельны?");
 			gcode = confirm("Угадайте да или нет");
 			writeToPage();
 		}
