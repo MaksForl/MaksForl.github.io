@@ -57,9 +57,7 @@
     <h1>Визитка пёсика</h1>
     <img src="https://maksforl.github.io/photo1.jpg" alt="Пёсик" style="width: 250px; height: 250px; border-radius: 50%; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">
    
-    <div class="col s8">
-        <img src='https://maksforl.github.io/1.gif' style="width: 1500px; height: 1000px; border-radius: 3%; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">
-    </div>
+    
     <p>Имя: <span id="name">Дэй</span></p>
     <p>Фамилия: <span id="surname">Созвездие</span></p>
     <p>Возраст (месяцев): <span id="vozr">4</span></p>
@@ -71,19 +69,16 @@
 
 
     <script>
-        function changeSurname() {
-            var newSurname = document.getElementById("newSurname").value;
-            document.getElementById("surname").innerText = newSurname;
+        function changeVozr() {
+            var newVozr = document.getElementById("newVozr").value;
+            document.getElementById("vozr").innerText = newVozr;
         }
         function changeName() {
-            var newSurname = document.getElementById("newName").value;
-            document.getElementById("name").innerText = newSurname;
+            var newVes = document.getElementById("newVes").value;
+            document.getElementById("ves").innerText = newVes;
         }
 
-        function changeBackgroundColor() {
-            var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-            document.body.style.backgroundColor = randomColor;
-        }
+        f
     </script>
 </body>
 <body>
