@@ -50,7 +50,7 @@
 		x.style.display = "block";
 		}
 		else 	{
-        	var text ='<p class="stroke">ВЫ НАМ НЕ НУЖНЫ!</p>'
+        	var text ='<p class="stroke">Пу-пуу-пуууу!</p>'
 		x.innerHTML = text;
 			}
 		}
