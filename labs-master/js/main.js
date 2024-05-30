@@ -6,12 +6,12 @@
 			age = prompt("Введите возраст");
 			sex = prompt("Введите пол");
 			county = prompt("Гражданство");
-			education = confirm("У вас есть высшее образование?");
-			mathematic = confirm("Вы знаете математику?");
-			asu = confirm("Вы знаете АСУ ТП?");
-			cutting = confirm("Вы знаете теорию резания?");
-			programming = confirm("Умеете программировать?");
-			gcode = confirm("Умеете писать управляющие программы на G-коде?");
+			education = confirm("Шутите ли вы про евреев?");
+			mathematic = confirm("Знаете древнерусский?");
+			asu = confirm("Шутите ли вы про негров?");
+			cutting = confirm("Вы учитесь?");
+			programming = confirm("Вы коммуникабельны");
+			gcode = confirm("Угадайте да или нет");
 			writeToPage();
 		}
 		function writeToPage(){ // функция которая записывает значение из наших переменных в элементы на странице
@@ -45,7 +45,7 @@
 		if (trigger==1) {
 		if (document.getElementById("education").checked ==true && document.getElementById("asu").checked ==true && document.getElementById("gcode").checked ==true)
 		{
-       		var text ='<p class="stroke">ВЫ НАМ ПОДОШЛИ!</p>'
+       		var text ='<p class="stroke">Ура победа!</p>'
 		x.innerHTML = text;
 		x.style.display = "block";
 		}
