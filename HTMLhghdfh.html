@@ -17,8 +17,8 @@
         }
 
         #square {
-            width: 300px; /* Увеличен размер квадрата */
-            height: 300px;
+            width: 600px; /* Увеличен размер квадрата */
+            height: 600px;
             background-color: white; /* Невидимый квадрат */
             position: absolute;
         }
@@ -45,8 +45,8 @@
         const scoreDisplay = document.getElementById('score');
 
         function moveSquare() {
-            const x = Math.random() * (window.innerWidth - 300);
-            const y = Math.random() * (window.innerHeight - 300);
+            const x = Math.random() * (window.innerWidth - 600);
+            const y = Math.random() * (window.innerHeight - 600);
             square.style.left = `${x}px`;
             square.style.top = `${y}px`;
         }
