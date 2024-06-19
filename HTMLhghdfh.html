@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кликни на квадрат</title>
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        #square {
+            width: 300px; /* Увеличен размер квадрата */
+            height: 300px;
+            background-color: white; /* Невидимый квадрат */
+            position: absolute;
+        }
+
+        #score {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="score">Счет: 0</div>
+    <div id="square"></div>
+
+    <script>
+        let score = 0;
+        const square = document.getElementById('square');
+        const scoreDisplay = document.getElementById('score');
+
+        function moveSquare() {
+            const x = Math.random() * (window.innerWidth - 300);
+            const y = Math.random() * (window.innerHeight - 300);
+            square.style.left = `${x}px`;
+            square.style.top = `${y}px`;
+        }
+
+        square.addEventListener('click', () => {
+            score++;
+            scoreDisplay.textContent = `Счет: ${score}`;
+            square.classList.add('highlight');
+            setTimeout(() => {
+                square.classList.remove('highlight');
+                moveSquare();
+            }, 200);
+        });
+
+        moveSquare();
+    </script>
+</body>
+</html>
+
