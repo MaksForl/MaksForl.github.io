@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кликни на квадрат</title>
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        #square {
+            width: 20vw; /* Увеличен размер квадрата, зависящий от ширины экрана */
+            height: 20vw;
+            background-color: white; /* Невидимый квадрат */
+            position: absolute;
+        }
+
+        #score {
+            position: absolute;
+            top: 5vh; /* Отступ сверху от ширины экрана */
+            left: 5vw; /* Отступ слева от ширины экрана */
+            font-size: 5vw; /* Адаптированный размер шрифта для мобильных устройств */
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="score">Счет: 0</div>
+    <div id="square"></div>
+
+    <script>
+let score = 0;
+const square = document.getElementById('square');
+const scoreDisplay = document.getElementById('score');
+
+function moveSquare() {
+            const x = Math.random() * (window.innerWidth - square.offsetWidth);
+            const y = Math.random() * (window.innerHeight - square.offsetHeight);
+            square.style.left = `${x}px`;
+            square.style.top = `${y}px`;
+            square.style.display = 'block'; // Показываем квадрат перед перемещением
+}
+
+square.addEventListener('touchstart', () => {
+            score++;
+            scoreDisplay.textContent = `Счет: ${score}`;
+            square.classList.add('highlight');
+            setTimeout(() => {
+                square.classList.remove('highlight');
+                moveSquare();
+            }, 200);
+});
+
+moveSquare(); // Вызываем функцию для первоначального размещения квадрата
+    </script>
+</body>
+</html>
